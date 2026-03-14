@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SneakerShop</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<h1> SneakerShop</h1>
+
+<input id="buscador" placeholder="Buscar tenis" onkeyup="buscar()">
+
+<div class="menuRight">
+
+<div id="userBox"></div>
+
+<div class="cartIcon" onclick="toggleCart()">
+🛒 <span id="cartCount">0</span>
+</div>
+
+</div>
+
+</header>
+
+
+<!-- REGISTRO -->
+
+<div class="modal hidden" id="registerModal">
+
+<div class="modalContent">
+
+<h2>Crear Cuenta</h2>
+
+<input id="regUser" placeholder="Usuario">
+
+<input id="regEmail" placeholder="Correo">
+
+<input id="regPass" type="password" placeholder="Contraseña">
+
+<input id="regPass2" type="password" placeholder="Confirmar contraseña">
+
+<input id="regCaptcha" placeholder="Escribe 1234">
+
+<button onclick="togglePassword()">Mostrar / Ocultar contraseña</button>
+
+<button onclick="registrar()">Crear Cuenta</button>
+
+<button onclick="cerrarRegistro()">Cerrar</button>
+
+</div>
+
+</div>
+
+
+<!-- LOGIN -->
+
+<div class="modal hidden" id="loginModal">
+
+<div class="modalContent">
+
+<h2>Iniciar Sesión</h2>
+
+<input id="loginUser" placeholder="Usuario">
+
+<input id="loginPass" type="password" placeholder="Contraseña">
+
+<button onclick="login()">Entrar</button>
+
+<button onclick="cerrarLogin()">Cerrar</button>
+
+</div>
+
+</div>
+
+
+<h2 class="titulo">Catálogo</h2>
+
+<section id="catalogo" class="catalogo"></section>
+
+
+<!-- CARRITO -->
+
+<div class="cartPanel hidden" id="cartPanel">
+
+<h2>Carrito</h2>
+
+<div id="carrito"></div>
+
+<h3 id="total"></h3>
+
+<button onclick="comprar()">Comprar</button>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
